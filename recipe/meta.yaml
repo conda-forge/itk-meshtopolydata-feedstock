@@ -1,4 +1,4 @@
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 {% set pyver = "cp{}{}".format(PY_VER[0], PY_VER[2]) %}
 
@@ -15,17 +15,20 @@ package:
 source:
   fn: {{ fn }}
   url: https://pypi.io/packages/{{ pyver }}/i/itk_meshtopolydata/{{ fn }}
-  sha256: 1b4aa1c0ead751e4eb8da7432118023e34fee7ecb93f1d9e95b880b8118288a0  # [osx and py36]
-  sha256: 434dadab2008a6252194515ad78f4e67a7c5696bd534b5d776d7c38d4fe38b58  # [osx and py37]
-  sha256: 43b66788607dd55f42912dc3db60f7feece7e3a1291fefe9c390b2eb7a3703bd  # [osx and py38]
+  sha256: 4282d0f10a7b9ce976286fd5fdd4750c6997ec3e89e151152f67f3aae1532c7f  # [osx and py36]
+  sha256: 68f3fc721e801ab49027c30c9c4761513b69105f5b0d609cde2237cd87178369  # [osx and py37]
+  sha256: dd7a3bf1134b215a82810570bdb7dc0155ab1652f564d3f40c000ef2c7e8422c  # [osx and py38]
+  sha256: 3e7c5c17bd3c3518f03fde874dd2d0540e3c36aaef3f9ad0d004a7e373b2988c  # [osx and py39]
 
-  sha256: e1599f3fe268cd9afad9ea6cd41c946d7f6f26e92196c899a2d8d464e5bf81b7  # [linux and py36]
-  sha256: b725a86b13bc642f0a6e35e0e5ffbbba45d5f158a00eb3fc7eceac7bcf24d75f  # [linux and py37]
-  sha256: 486e418808c27ccc76619737219fa57fcd1de2da5fcd0325ee8c4395965deb39  # [linux and py38]
+  sha256: 07d3587a3bde862a0f0900be79d54c97ad4fb1b93920ab76c5dc2bbb5fc31d74  # [linux and py36]
+  sha256: 7a1ca27aea1d7f43524bd22ce1cbb897ecb44b8cb2e4bfdf052a71494a59b531  # [linux and py37]
+  sha256: 90218cbc28deadbd8428f86bffc503048571b97f4e3e2a364d7bf35f95de2895  # [linux and py38]
+  sha256: 3bfad563e9fc50f18702831bb123027e1bf821f3765f5be9045b37539a29c826  # [linux and py39]
 
-  sha256: 66859c1fac966398bac0bd928ff209d33f6f6f50bfc66a3771a783cac7be0690  # [win and py36]
-  sha256: 0a3114861a10101bbb73a33642ee9322d569cd3c3a09803484c6b43a2fd1680f  # [win and py37]
-  sha256: 82e5ee37382ad7291914444f07039cf72564d5ed76a0c987d0c3e0be9ade19ca  # [win and py38]
+  sha256: dcf81d704df936a0cb7170caa46ddb5960e293261ad42bd05ceb1c1e65f8593e  # [win and py36]
+  sha256: 6596917170d75302c4bc0614bb34683972267dee8ee567166419445e291efed9  # [win and py37]
+  sha256: d7db6bcd22c8fa4a86500628aaf4fc0d10aa3907d0cd214c393853b7200e7d6d  # [win and py38]
+  sha256: fb9661e6618c294388d3648e2cd9d283d8e9de26455a743659854f2ed2ff08ee  # [win and py39]
 
 build:
   number: 1
@@ -38,7 +41,7 @@ requirements:
     - pip
   run:
     - python
-    - itk >=5.1.0
+    - itk >=5.1.2
     - numpy
 
 test:
