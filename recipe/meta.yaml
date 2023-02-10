@@ -6,7 +6,7 @@
 {% set platform = "manylinux_2_28_x86_64" %}  # [linux]
 {% set platform = "macosx_10_9_x86_64" %}  # [osx]
 
-{% set fn = "{}-{}-{}-{}m-{}.whl".format("itk_meshtopolydata", version, pyver, pyver, platform) %}
+{% set fn = "{}-{}-{}-{}-{}.whl".format("itk_meshtopolydata", version, pyver, pyver, platform) %}
 
 package:
   name: itk-meshtopolydata
@@ -44,7 +44,7 @@ requirements:
     - pip
   run:
     - python
-    - itk >=5.1.2
+    - itk >=5.3.0
     - numpy
 
 test:
