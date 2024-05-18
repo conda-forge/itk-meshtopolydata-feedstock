@@ -28,12 +28,12 @@ source:
   sha256: 82e5ee37382ad7291914444f07039cf72564d5ed76a0c987d0c3e0be9ade19ca  # [win and py38]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script: "{{ PYTHON }} -m pip install --no-deps -vv {{ fn }}"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
