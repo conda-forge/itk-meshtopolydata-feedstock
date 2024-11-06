@@ -33,7 +33,7 @@ build:
   script: "{{ PYTHON }} -m pip install --no-deps -vv {{ fn }}"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
