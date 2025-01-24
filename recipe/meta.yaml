@@ -14,7 +14,7 @@ package:
 
 source:
   fn: {{ fn }}
-  url: https://pypi.io/packages/{{ pyver }}/i/itk_meshtopolydata/{{ fn }}
+  url: https://pypi.org/packages/{{ pyver }}/i/itk_meshtopolydata/{{ fn }}
   sha256: 1b4aa1c0ead751e4eb8da7432118023e34fee7ecb93f1d9e95b880b8118288a0  # [osx and py36]
   sha256: 434dadab2008a6252194515ad78f4e67a7c5696bd534b5d776d7c38d4fe38b58  # [osx and py37]
   sha256: 43b66788607dd55f42912dc3db60f7feece7e3a1291fefe9c390b2eb7a3703bd  # [osx and py38]
@@ -28,12 +28,12 @@ source:
   sha256: 82e5ee37382ad7291914444f07039cf72564d5ed76a0c987d0c3e0be9ade19ca  # [win and py38]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script: "{{ PYTHON }} -m pip install --no-deps -vv {{ fn }}"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
